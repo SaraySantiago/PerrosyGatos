@@ -46,17 +46,19 @@ class gato:
     
     
 
-    if __name__ ==  "__main__":
+if __name__ == "__main__":
+      
+    # g0 = gato()
+    # # print(g0)
+    # g0.pedirComida()
+    # g0.comer()
+    # g0.pedirComida()
         
-        g0 = gato ()
-       # print (g0)
-        g0.PedirComida()
-        g0.comer()
-        
-        
-        g1 = gato ("Noche")
-       # print (g1)
-        g1.PedirComida()
-        g1.comer()
-        g1.pedirComida()
-        g1.Tocar()
+    g1 = gato("Noche")
+    # print(g1)
+    g1.pedirComida()
+    g1.comer()    
+    g1.pedirComida()    
+    g1.tocar()
+    g1.dormir()
+    g1.tocar()
