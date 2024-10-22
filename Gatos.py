@@ -4,6 +4,7 @@ class gato:
 
     __name = None 
     __hambre = True
+    __sleepy = False
     
     def __init__(self, aname = "micifu") -> None:
        self. __name = aname 
