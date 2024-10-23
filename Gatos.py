@@ -56,9 +56,9 @@ if __name__ == "__main__":
         
     g1 = gato("Noche")
     # print(g1)
-    g1.pedirComida()
+    g1.PedirComida()
     g1.comer()    
-    g1.pedirComida()    
+    g1.PedirComida()    
     g1.tocar()
     g1.dormir()
     g1.tocar()
