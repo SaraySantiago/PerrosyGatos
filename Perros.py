@@ -6,7 +6,7 @@ class perro:
     __hambre = True
     __sleepy = False
     
-    def __init__(self, aname = "dog") -> None:
+    def __init__(self, aname = "Sena") -> None:
        self. __name = aname 
        self.PedirComida()
         
