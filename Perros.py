@@ -4,60 +4,59 @@ class perro:
 
     __name = None 
     __hambre = True
-    __sleepy = False
+    __sleppy = True
+    __fear = False
+    __happy = True
+
+    def __init__(self, aname = "firulais") -> None:
+     self.__name = aname
+     self.ladra()
     
-    def __init__(self, aname = "Sena") -> None:
-       self. __name = aname 
-       self.PedirComida()
-        
-    def __str__(self) -> str:
-        answ = f"me llamo {self.__name}"
-        return answ 
-    
-    def comer (self):
-      self.__hambre = False
-      self.__sleepy = True
-       
-    def dormir (self):
-        print(f"{self.__name}: zzzzzzzzz")
-        self.__sleepy = False 
-        self.__hambre = True
-        
-    def PedirComida (self):
-        if self.__hambre:
-            print(f"{self.__name}: dame comida porfi")
+    def ladra(self):
+     print (f"{self.__name}: wof wof")
+     
+    def pegar(self):
+        self.__fear = True 
+     
+    def ataca(self):
+        if self.__fear:
+            print (f"{self.__name}: mieditoo")
         else:
-            print(f"{self.__name}: No tengo hambre")
-
-    def jugar(self):
-        if not self.__sleepy:
-            print(f"{self}: Genial, vamos a jugar")
-        else: 
-            self.dog()
-            self.PedirComida()
-    def dog(self):
-        print("woof woof")
-
+            print (f"{self.__name}: GRRR")  
+    
+    def traePelota(self, color=" rojo"):
+         return "pelota" + color
    
-    
-    
-    
-    
-    
-
-if __name__ == "__main__":
-      
-    # p0 = perro()
-    # # print(p0)
-    # p0.pedirComida()
-    # p0.comer()
-    # p0.pedirComida()
+    def comer (self):
+        self.__hambre = False
         
-    p1 = perro("Lady")
-    # print(p1)
-    p1.PedirComida()
-    p1.comer()    
-    p1.PedirComida()    
-    p1.jugar()
-    p1.dormir()
-    p1.jugar()
+    def dormir(self):
+        self.__sleppy = False
+    
+    def pedirComida (self):
+       if self.__hambre:
+        self.ladra()
+        
+    def tocar(self):
+        if self.__fear:
+            self.ladra()
+            self.__fear = False
+        else:
+            self.__happy = True
+            self.pedirComida()   
+        
+        
+        
+if __name__ == "__main__":
+    
+    p0 = perro("sultan")   
+    meTrae = p0.traePelota()
+    print(meTrae)
+    
+    meTrae = p0.traePelota (" verde")
+    print(meTrae)
+    p0.dormir()
+    p0.pedirComida()
+    p0.comer()
+    p0.ataca()
+    p0.dormir()
