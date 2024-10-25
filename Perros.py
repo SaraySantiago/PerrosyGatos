@@ -22,7 +22,7 @@ class perro:
         print(f"{self.__name}: zzzzzzzzz")
         self.__sleepy = False 
         self.__hambre = True
-    
+        
     def PedirComida (self):
         if self.__hambre:
             print(f"{self.__name}: dame comida porfi")
